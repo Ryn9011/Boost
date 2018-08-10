@@ -2,21 +2,43 @@ import uuid from 'uuid';
 
 export const addJob = (
     {
+        brand,
         jobNumber,
         itemName,
         orderedBy,
         orderDate,
-        unitPrice
+        quantity,
+        status,
+        unitPrice,
+        lineValue,
+        dpbp,
+        etaDate,
+        etaText,
+        shippingInfo,
+        detailStatus,
+        orderDetails,
+        comments
     } = {}
 ) => ({
     type: 'ADD_JOB',
     job: {
         id: uuid(),
+        brand,
         jobNumber,
         itemName,
         orderedBy,
         orderDate,
-        unitPrice
+        quantity,
+        status,
+        unitPrice,
+        lineValue,
+        dpbp,
+        etaDate,
+        etaText,
+        shippingInfo,
+        detailStatus,
+        orderDetails,
+        comments
     }
 });
 

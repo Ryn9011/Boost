@@ -13,7 +13,23 @@ import { addJob } from './actions/jobs';
 
 const store = configureStore();
 
-store.dispatch(addJob({jobNumber: 45632, itemName: 'Coolers', orderedBy: 'Ryan', orderDate: 1000, unitPrice: 6000 }));
+store.dispatch(addJob({
+  brand: 'Speights', 
+  jobNumber: 45632, 
+  itemName: 'Coolers', 
+  orderedBy: 'Ryan', 
+  orderDate: 1000, 
+  unitPrice: 6000,
+  quantity: 40,
+  status: 'in production',
+  lineValue: 5000,
+  dpbp: 'NA',
+  etaDate: 1000,
+  shippingInfo: 'Shipped',
+  detailStatus: 'In production',
+  orderDetails: 'ready',
+  comments: 'comments here'
+}));
 
 console.log(store.getState());
 
